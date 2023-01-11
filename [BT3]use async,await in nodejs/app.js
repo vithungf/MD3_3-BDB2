@@ -1,13 +1,13 @@
-let sum = 0;
+let max = 0;
 async function getSum(arr){
     if(arr instanceof Array){
         for(let i=0;i<arr.length;i++){
-            if (sum < arr[i]){
-                sum = arr[i];
+            if (max < arr[i]){
+                max = arr[i];
             }
 
         }
-        return sum;
+        return max;
 
     }
     throw new Error('input data is incorrect')
