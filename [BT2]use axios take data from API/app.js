@@ -1,9 +1,7 @@
-const axios = require('axios');
+const axios =  require('axios')
+const url = 'https://jsonplaceholder.typicode.com/users'
 
-async function getAllUser (){
-    let data = await axios.get('https://jsonplaceholder.typicode.com/users')
-    return data.data
-}
-getAllUser().then((result)=>{
-    console.table(result)
+axios.get(url)
+.then(data => {
+    console.log(data.data)
 })
